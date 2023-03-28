@@ -21,7 +21,10 @@ const Projects = () => {
             alt="Not Found"
           />
           <div className="flex justify-center items-center absolute h-full w-full transition-all duration-700 bg-black/60 rounded-lg item-center -bottom-0 hover:bottom-0 opacity-0 hover:opacity-100">
-            <a href="#" className="py-2 px-5 text-white text-5xl ">
+            <a
+              href="https://github.com/Oaksk68/MovieApp"
+              className="py-2 px-5 text-white text-5xl "
+            >
               <AiFillGithub className="border-2 border-gray-200 rounded-full transition-all duration-300 ease-in-out hover:scale-110" />
             </a>
             <h2 className="text-xl capitalize text-white">Movie Project</h2>

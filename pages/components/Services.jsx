@@ -15,7 +15,13 @@ const Services = () => {
       </div>
       <div className="lg:flex gap-10">
         <div className="w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
-          <Image className="mx-auto" src={design} width={100} height={100} />
+          <Image
+            className="mx-auto"
+            src={design}
+            width={100}
+            height={100}
+            alt="Not Found"
+          />
           <h3 className="text-lg font-bold pt-8 pb-2 dark:text-white">
             UI/UX Design
           </h3>
@@ -29,7 +35,13 @@ const Services = () => {
           <p className="text-gray-500 py-1 dark:text-gray-400">Figma</p>
         </div>
         <div className="w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
-          <Image className="mx-auto" src={code} width={100} height={100} />
+          <Image
+            className="mx-auto"
+            src={code}
+            width={100}
+            height={100}
+            alt="Not Found"
+          />
           <h3 className="text-lg font-bold pt-8 pb-2 dark:text-white">
             Web Design
           </h3>
@@ -51,6 +63,7 @@ const Services = () => {
             src={consulting}
             width={100}
             height={100}
+            alt="Not Found"
           />
           <h3 className="text-lg font-bold pt-8 pb-2 dark:text-white">
             Quality Assurance

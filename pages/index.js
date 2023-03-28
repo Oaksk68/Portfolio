@@ -126,7 +126,7 @@ export default function Home() {
           <section id="home">
             <div className="text-center p-10">
               <div className="mx-auto rounded-full overflow-hidden w-80 h-80  md:h-96 md:w-96">
-                <Image src={oaksk} className="bg-cover" />
+                <Image src={oaksk} className="bg-cover" alt="Not Found" />
               </div>
               <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
                 Oak Soe Khant
@@ -160,7 +160,7 @@ export default function Home() {
         <section id="about">
           <div className="grid grid-cols-3 gap-3 mb-20 mx-10 p-12">
             <div className="flex h-100 justify-center items-center">
-              <Image src={oaksk2} className="rounded-lg" />
+              <Image src={oaksk2} className="rounded-lg" alt="Not Found" />
             </div>
             <div className="col-span-2 shadow rounded-lg p-7">
               <h3 className="text-3xl py-1 m-auto font-bold text-teal-600">

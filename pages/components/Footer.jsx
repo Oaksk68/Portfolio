@@ -13,11 +13,17 @@ const Footer = () => {
       <div className="w-full container mx-auto p-4 md:px-6 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="block my-10 md:mb-5">
-            <a href="/" className="flex items-center mb-4 sm:mb-0">
+            <Link
+              activeClass="active"
+              smooth
+              spy
+              to="home"
+              className="flex items-center mb-4 sm:mb-0"
+            >
               <h1 className="text-4xl md:text-5xl font-burtons cursor-pointer dark:text-white">
                 Oaksk
               </h1>
-            </a>
+            </Link>
           </div>
           <div className="block my-10">
             <div className="flex items-start md:items-center md:justify-center md:ml-20 dark:text-teal-600">

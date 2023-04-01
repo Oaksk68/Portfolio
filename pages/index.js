@@ -34,32 +34,40 @@ export default function Home() {
         {/* nav section starts */}
         <section id="nav" className="relative">
           <nav className="py-10 md:flex items-center justify-between dark:text-white">
-            <h1 className="ml-5 text-5xl font-burtons cursor-pointer">Oaksk</h1>
+            <h1 className="ml-6 mt-3 text-5xl font-burtons cursor-pointer">
+              Oaksk
+            </h1>
             <div
               onClick={() => setOpen(!open)}
               className="text-3xl absolute right-1 top-10 md:hidden cursor-pointer"
             >
               {open ? (
-                <AiOutlineClose className="text-4xl mr-5 dark:text-white stroke-2" />
+                <AiOutlineClose className="text-4xl mt-3 mr-5 dark:text-white stroke-2" />
               ) : (
-                <AiOutlineMenu className="text-4xl mr-5 dark:text-white stroke-2" />
+                <AiOutlineMenu className="text-4xl mt-3 mr-5 dark:text-white stroke-2" />
               )}
             </div>
             <div
               className={`absolute min-h-fit w-screen bg-slate-50 dark:bg-gray-900 md:bg-none md:static md:min-h-fit md:w-auto items-center px-5 transition-all duration-500 ease-in ${
-                open ? "right-0" : "right-[-250%] "
+                open ? "right-0" : "right-[-200%] "
               }`}
             >
               <ul
-                className={`flex md:flex-row flex-col md:items-center gap-6 py-2 text-center uppercase `}
+                className={`flex md:flex-row flex-col font-medium md:items-center gap-6 py-2 text-center uppercase `}
               >
-                <li className="text-lg mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
+                <li className="text-lg pt-10 sm:pt-0 mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
                   <Link activeClass="active" smooth spy to="home">
                     Home
                   </Link>
                 </li>
                 <li className="text-lg mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
-                  <Link activeClass="active" smooth spy to="about">
+                  <Link
+                    activeClass="active"
+                    smooth
+                    spy
+                    offset={-100}
+                    to="about"
+                  >
                     About
                   </Link>
                 </li>
@@ -100,7 +108,7 @@ export default function Home() {
                   onClick={() => setDarkMode(!darkMode)}
                   className="md:ml-5 cursor-pointer"
                 >
-                  <BsFillMoonStarsFill className="inline cursor-pointer text-3xl hover:text-teal-600 duration-300 md:mb-4" />
+                  <BsFillMoonStarsFill className="inline cursor-pointer text-3xl hover:text-teal-600 duration-300 mb-10 md:mb-4" />
                 </li>
                 {/* {Links.map((URL) => (
                   <li key={URL.name} className="text-lg">
@@ -119,7 +127,7 @@ export default function Home() {
 
         <section id="home">
           <div className="text-center p-10">
-            <div className="mx-auto rounded-full overflow-hidden w-34 h-42 sm:h-96 sm:w-96">
+            <div className="mx-auto rounded-full overflow-hidden w-64 h-64 sm:h-96 sm:w-96">
               <Image src={oaksk} className="bg-cover" alt="Not Found" />
             </div>
             <h1 className="text-4xl my-6 md:my-10 py-2 text-teal-600 font-bold md:text-6xl">

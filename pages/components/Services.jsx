@@ -13,8 +13,8 @@ const Services = () => {
         </h3>
         <h2 className="font-semibold text-4xl text-teal-600">Skill-Set</h2>
       </div>
-      <div className="m-5 md:flex gap-10">
-        <div className="md:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
+      <div className="mx-10 lg:flex gap-10">
+        <div className="lg:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
             className="mx-auto"
             src={design}
@@ -34,7 +34,7 @@ const Services = () => {
           <p className="text-gray-500 py-1 dark:text-gray-400">Illustrator</p>
           <p className="text-gray-500 py-1 dark:text-gray-400">Figma</p>
         </div>
-        <div className="md:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
+        <div className="lg:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
             className="mx-auto"
             src={code}
@@ -57,7 +57,7 @@ const Services = () => {
           <p className="text-gray-500 py-1 dark:text-gray-400">React.js</p>
         </div>
 
-        <div className="md:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
+        <div className="lg:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
             className="mx-auto"
             src={consulting}

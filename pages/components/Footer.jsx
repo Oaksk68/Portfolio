@@ -27,30 +27,33 @@ const Footer = () => {
           </div>
           <div className="block my-10">
             <div className="flex items-start md:items-center md:justify-center md:ml-20 dark:text-teal-600">
-              <a href="https://www.facebook.com/oaksoekhant68/">
-                <AiFillFacebook className="text-center mr-4 text-3xl hover:text-teal-400 cursor-pointer transition-all duration-300" />
+              <a href="https://www.facebook.com/oaksoekhant68/" target="_blank">
+                <AiFillFacebook className="text-center mr-4 text-3xl hover:text-slate-400 cursor-pointer transition-all duration-300" />
               </a>
-              <a href="https://www.instagram.com/_oaksk/">
-                <AiFillInstagram className="text-center mr-4 text-3xl hover:text-teal-400 cursor-pointer transition-all duration-300" />
+              <a href="https://www.instagram.com/_oaksk/" target="_blank">
+                <AiFillInstagram className="text-center mr-4 text-3xl hover:text-slate-400 cursor-pointer transition-all duration-300" />
               </a>
-              <a href="https://www.linkedin.com/in/oak-soe-khant-278475203/">
-                <AiFillLinkedin className="text-center mr-4 text-3xl hover:text-teal-400 cursor-pointer transition-all duration-300" />
+              <a
+                href="https://www.linkedin.com/in/oak-soe-khant-278475203/"
+                target="_blank"
+              >
+                <AiFillLinkedin className="text-center mr-4 text-3xl hover:text-slate-400 cursor-pointer transition-all duration-300" />
               </a>
-              <a href="https://github.com/Oaksk6820">
-                <AiFillGithub className="text-center mr-4 text-3xl hover:text-teal-400 cursor-pointer transition-all duration-300" />
+              <a href="https://github.com/Oaksk6820" target="_blank">
+                <AiFillGithub className="text-center mr-4 text-3xl hover:text-slate-400 cursor-pointer transition-all duration-300" />
               </a>
             </div>
           </div>
 
           <div className="dark:text-white">
             <ul className="flex flex-wrap items-center relative mb-6 text-sm font-bold  sm:mb-0">
-              <li className="cursor-pointer mr-5  hover:text-teal-500 transition-all duration-300">
-                <Link activeClass="active" smooth spy offset={100} to="about">
+              <li className="cursor-pointer mr-5  hover:text-slate-500 transition-all duration-300">
+                <Link activeClass="active" smooth spy offset={-100} to="about">
                   About
                 </Link>
               </li>
 
-              <li className="cursor-pointer mr-5  hover:text-teal-500 transition-all duration-300">
+              <li className="cursor-pointer mr-5  hover:text-slate-500 transition-all duration-300">
                 <Link activeClass="active" smooth spy offset={100} to="contact">
                   Contact
                 </Link>
@@ -59,13 +62,15 @@ const Footer = () => {
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2023{" "}
-          <a href="" className="hover:underline">
-            Oaksk
-          </a>
-          . All Rights Reserved.
-        </span>
+        <div className="flex justify-center items-center">
+          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2023{" "}
+            <a href="" className="hover:underline">
+              Oaksk
+            </a>
+            . All Rights Reserved.
+          </span>
+        </div>
       </div>
     </footer>
   );

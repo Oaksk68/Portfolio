@@ -5,13 +5,19 @@ import Image from "next/image";
 const About = () => {
   return (
     <section id="about">
-      <h3 className="text-3xl font-bold text-center text-teal-600">About Me</h3>
+      <h3 className="text-3xl mb-16 md:mb-0 font-bold text-center text-teal-600">
+        About Me
+      </h3>
       <div className="block md:grid grid-cols-3 gap-3 mx-8 mb-20 md:mx-10 md:p-12">
         <div className="flex h-100 justify-center items-center">
-          <Image src={oaksk2} className="rounded-lg" alt="Not Found" />
+          <Image
+            src={oaksk2}
+            className="rounded-full w-48 h-48 md:w-40 md:h-40 lg:w-80 lg:h-80 object-cover"
+            alt="Not Found"
+          />
         </div>
         <div className="col-span-2 shadow rounded-lg p-7">
-          <p className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400 ">
+          <p className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400">
             Passionate college student seeking for internship. Adapt in various
             social media platforms and office technology programs. Motivated
             student, eager to learn new experience from senior and to try new
@@ -52,9 +58,14 @@ const About = () => {
               </h1>
             </div>
           </div>
-          <button className="bg-teal-600 hover:bg-teal-800 hover:text-gray-400 text-white font-bold py-3 px-4 rounded mt-5 transition-all duration-300 ">
-            Download CV
-          </button>
+          <a
+            href="https://drive.google.com/file/d/1BDTEwqjsCaNqRPFimTCe14WK5hrOYBVv/view?usp=sharing"
+            target="_blank"
+          >
+            <button className="bg-teal-600 hover:bg-teal-800 hover:text-gray-400 text-white font-bold py-3 px-4 rounded mt-5 transition-all duration-300 ">
+              Download CV
+            </button>
+          </a>
         </div>
       </div>
     </section>

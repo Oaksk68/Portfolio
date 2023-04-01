@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         burtons: "burtons",
       },
+      spacing: {
+        30: "7.5rem",
+      },
     },
   },
   plugins: [],

@@ -10,22 +10,15 @@ import {
 import { Link } from "react-scroll";
 import Image from "next/image";
 import oaksk from "../public/profile.jpg";
-import oaksk2 from "../public/Me.jpg";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useState } from "react";
+import About from "./components/About";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  // let Links = [
-  //   { name: "Home", link: "/" },
-  //   { name: "About", link: "/" },
-  //   { name: "Services", link: "/" },
-  //   { name: "Projects", link: "/" },
-  //   { name: "Contact", link: "/" },
-  // ];
 
   let [open, setOpen] = useState(false);
 
@@ -37,40 +30,40 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-slate-50 px-10 transition-all duration-500 ease-in dark:bg-gray-900 pb-5">
+      <main className="bg-slate-50 md:px-10 transition-all duration-500 ease-in dark:bg-gray-900">
         {/* top section starts */}
-        <section className="relative min-h-screen mb-40">
+        <section id="nav" className="relative md:mb-40">
           <nav className="py-10 md:flex items-center justify-between dark:text-white">
-            <h1 className="text-3xl font-burtons cursor-pointer">Oaksk</h1>
+            <h1 className="ml-5 text-3xl font-burtons cursor-pointer">Oaksk</h1>
             <div
               onClick={() => setOpen(!open)}
-              className=" text-3xl absolute right-8 top-10 md:hidden cursor-pointer"
+              className="text-3xl absolute right-1 top-10 md:hidden cursor-pointer"
             >
               {open ? (
-                <AiOutlineClose className="dark:text-white" />
+                <AiOutlineClose className="text-4xl mr-5 dark:text-white stroke-2" />
               ) : (
-                <AiOutlineMenu className="dark:text-white" />
+                <AiOutlineMenu className="text-4xl mr-5 dark:text-white stroke-2" />
               )}
             </div>
             <div
-              className={`absolute w-full bg-slate-50 dark:bg-gray-900 md:bg-none md:static md:min-h-fit min-h-[60vh] md:w-auto items-center px-5  transition-all duration-500 ease-in ${
-                open ? "right-0 " : "right-[-100%]"
+              className={`absolute min-h-fit w-screen bg-slate-50 dark:bg-gray-900 md:bg-none md:static md:min-h-fit md:w-auto items-center px-5  transition-all duration-500 ease-in ${
+                open ? "right-0" : "right-[-250%] "
               }`}
             >
               <ul
                 className={`flex md:flex-row flex-col md:items-center gap-6 py-10 text-center uppercase `}
               >
-                <li className="text-lg transition-all cursor-pointer duration-300 hover:text-teal-600">
+                <li className="text-lg mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
                   <Link activeClass="active" smooth spy to="home">
                     Home
                   </Link>
                 </li>
-                <li className="text-lg transition-all cursor-pointer duration-300 hover:text-teal-600">
+                <li className="text-lg mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
                   <Link activeClass="active" smooth spy to="about">
                     About
                   </Link>
                 </li>
-                <li className="text-lg transition-all cursor-pointer duration-300 hover:text-teal-600">
+                <li className="text-lg mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
                   <Link
                     activeClass="active"
                     smooth
@@ -81,7 +74,7 @@ export default function Home() {
                     Services
                   </Link>
                 </li>
-                <li className="text-lg transition-all cursor-pointer duration-300 hover:text-teal-600">
+                <li className="text-lg mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
                   <Link
                     activeClass="active"
                     smooth
@@ -92,7 +85,7 @@ export default function Home() {
                     Project
                   </Link>
                 </li>
-                <li className="text-lg transition-all cursor-pointer duration-300 hover:text-teal-600">
+                <li className="text-lg mb-3 transition-all cursor-pointer duration-300 hover:text-teal-600">
                   <Link
                     activeClass="active"
                     smooth
@@ -107,7 +100,7 @@ export default function Home() {
                   onClick={() => setDarkMode(!darkMode)}
                   className="md:ml-5 text-x cursor-pointer text-lg "
                 >
-                  <BsFillMoonStarsFill className="inline cursor-pointer text-2xl hover:text-teal-600 duration-300 mb-1" />
+                  <BsFillMoonStarsFill className="inline cursor-pointer text-3xl hover:text-teal-600 duration-300 mb-1" />
                 </li>
                 {/* {Links.map((URL) => (
                   <li key={URL.name} className="text-lg">
@@ -122,99 +115,41 @@ export default function Home() {
               </ul>
             </div>
           </nav>
-
-          <section id="home">
-            <div className="text-center p-10">
-              <div className="mx-auto rounded-full overflow-hidden w-80 h-80  md:h-96 md:w-96">
-                <Image src={oaksk} className="bg-cover" alt="Not Found" />
-              </div>
-              <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-                Oak Soe Khant
-              </h2>
-              <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
-                Software Engineering Intern
-              </h3>
-              <p className="text-md py-5 leading-8 text-gray-500 md:text-xl dark:text-gray-400">
-                4th year Student seeking for internship opportunities. Willing
-                to exprerience real life problems and eager to learn the
-                solutions.
-              </p>
-            </div>
-            <div className="text-5xl flex justify-center gap-16 py-3 dark:text-teal-600">
-              <a href="https://www.facebook.com/oaksoekhant68/" target="blank">
-                <AiFillFacebook className="hover:text-teal-400 transition-all duration-300 cursor-pointer " />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/oak-soe-khant-278475203/"
-                target="blank"
-              >
-                <AiFillLinkedin className="hover:text-teal-400 transition-all duration-300 cursor-pointer text-grey-600" />
-              </a>
-              <a href="https://twitter.com/oaksk6820" target="blank">
-                <AiFillTwitterCircle className="hover:text-teal-400 transition-all duration-300 cursor-pointer text-grey-600" />
-              </a>
-            </div>
-          </section>
         </section>
 
-        <section id="about">
-          <div className="grid grid-cols-3 gap-3 mb-20 mx-10 p-12">
-            <div className="flex h-100 justify-center items-center">
-              <Image src={oaksk2} className="rounded-lg" alt="Not Found" />
+        <section id="home">
+          <div className="text-center p-10">
+            <div className="mx-auto rounded-full overflow-hidden w-34 h-42 sm:h-96 sm:w-96">
+              <Image src={oaksk} className="bg-cover" alt="Not Found" />
             </div>
-            <div className="col-span-2 shadow rounded-lg p-7">
-              <h3 className="text-3xl py-1 m-auto font-bold text-teal-600">
-                About Me
-              </h3>
-              <p className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400 ">
-                Passionate college student seeking for internship. Adapt in
-                various social media platforms and office technology programs.
-                Motivated student, eager to learn new experience from senior and
-                to try new things. A creative thinker, adapt in software
-                development and keen to experience real world jobs and how it
-                operates.
-              </p>
-              <div className="grid grid-cols-2">
-                <div>
-                  <h1 className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400 ">
-                    <span className="text-gray-800 dark:text-gray-300">
-                      Name : {""}
-                    </span>
-                    Oak Soe Khant
-                  </h1>
-                  <h1 className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400 ">
-                    <span className="text-gray-800 dark:text-gray-300">
-                      Phone : {""}
-                    </span>
-                    (+66) 96 307 0573
-                  </h1>
-                  <a
-                    href="https://drive.google.com/file/d/1BDTEwqjsCaNqRPFimTCe14WK5hrOYBVv/view?usp=share_link"
-                    target="_blank"
-                  >
-                    <button className="bg-teal-600 hover:bg-teal-800 hover:text-gray-400 text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-500 ">
-                      Download CV
-                    </button>
-                  </a>
-                </div>
-                <div>
-                  <h1 className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400 ">
-                    <span className="text-gray-800 dark:text-gray-300">
-                      Age : {""}
-                    </span>
-                    22 years
-                  </h1>
-                  <h1 className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400 ">
-                    <span className="text-gray-800 dark:text-gray-300">
-                      Address : {""}
-                    </span>
-                    231 ม.2 ซ.5 ต.ท่าสุด <br /> อ.เมืองเชียงราย จ.เชียงราย 57100
-                  </h1>
-                </div>
-              </div>
-            </div>
+            <h1 className="text-4xl my-6 md:my-10 py-2 text-teal-600 font-bold md:text-6xl">
+              Oak Soe Khant
+            </h1>
+            <h3 className="text-xl py-2 md:text-3xl dark:text-white">
+              Software Engineering Intern
+            </h3>
+            <p className="text-md py-5 leading-8 text-gray-500 md:text-xl dark:text-gray-400">
+              4th year Student seeking for internship opportunities. Willing to
+              exprerience real life problems and eager to learn the solutions.
+            </p>
+          </div>
+          <div className="text-5xl mb-40 flex justify-center gap-16 py-3 dark:text-teal-600">
+            <a href="https://www.facebook.com/oaksoekhant68/" target="blank">
+              <AiFillFacebook className="hover:text-teal-400 transition-all duration-300 cursor-pointer " />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/oak-soe-khant-278475203/"
+              target="blank"
+            >
+              <AiFillLinkedin className="hover:text-teal-400 transition-all duration-300 cursor-pointer text-grey-600" />
+            </a>
+            <a href="https://twitter.com/oaksk6820" target="blank">
+              <AiFillTwitterCircle className="hover:text-teal-400 transition-all duration-300 cursor-pointer text-grey-600" />
+            </a>
           </div>
         </section>
+
+        <About />
 
         {/* design section starts */}
         <Services />

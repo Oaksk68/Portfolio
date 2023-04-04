@@ -38,10 +38,6 @@ const About = () => {
                 </span>
                 (+66) 96 307 0573
               </h1>
-              <a
-                href="https://drive.google.com/file/d/1BDTEwqjsCaNqRPFimTCe14WK5hrOYBVv/view?usp=share_link"
-                target="_blank"
-              ></a>
             </div>
             <div>
               <h1 className="text-md py-2 leading-8 text-gray-500 dark:text-gray-400 ">
@@ -59,7 +55,7 @@ const About = () => {
             </div>
           </div>
           <a
-            href="https://drive.google.com/file/d/1BDTEwqjsCaNqRPFimTCe14WK5hrOYBVv/view?usp=sharing"
+            href="https://drive.google.com/file/d/1XFcksfzQdIIL5Ne6WASyFN6iITNfD2W2/view?usp=sharing"
             target="_blank"
           >
             <button className="bg-teal-600 hover:bg-teal-800 hover:text-gray-400 text-white font-bold py-3 px-4 rounded mt-5 transition-all duration-300 ">

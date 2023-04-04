@@ -2,25 +2,11 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import { FaPaperPlane } from "react-icons/fa";
-import Validation from "./Validation";
 
 const Contact = () => {
-  const [values, setValues] = useState({
-    user_name: "",
-    user_email: "",
-    password: "",
-  });
-
-  function handleInput(event) {
-    const newObj = { ...values, [event.target.user_name]: event.target.value };
-    setValues(newObj);
-  }
-
   const form = useRef();
-  const [errors, setErrors] = useState({});
   const sendEmail = (e) => {
     e.preventDefault();
-    setErrors(Validation(values));
 
     emailjs
       .sendForm(
@@ -38,7 +24,6 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-    e.target.reset();
   };
   return (
     <section id="contact" className="pb-20">
@@ -52,29 +37,24 @@ const Contact = () => {
             className="mb-5  placeholder:text-slate-400 block bg-white w-80 border border-slate-300 rounded-md p-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
             type="text"
             name="user_name"
-            onChange={handleInput}
           />
-          {errors.user_name && <p className="text-red-700">{errors.name}</p>}
           <label className="relative block dark:text-gray-500">Email</label>
           <input
             className="mb-5  placeholder:text-slate-400 block bg-white w-80 border border-slate-300 rounded-md p-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
             type="email"
             name="user_email"
           />
-          {errors.user_email && <p className="text-red-700">{errors.email}</p>}
           <label className="relative block dark:text-gray-500">Subject</label>
           <input
             className="mb-5  placeholder:text-slate-400 block bg-white w-80 border border-slate-300 rounded-md p-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
             type="text"
             name="subject"
-            onChange={handleInput}
           />
           <label className="relative block dark:text-gray-500">Message</label>
           <textarea
             rows="6"
             className="w-full resize-none placeholder:text-slate-400 mb-5 block bg-white border border-slate-300 rounded-md p-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
             name="message"
-            onChange={handleInput}
           />
           <button
             type="submit"
